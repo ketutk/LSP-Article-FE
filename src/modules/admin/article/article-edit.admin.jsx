@@ -113,7 +113,7 @@ export const EditArticleAdmin = ({ user, token, imageUrl }) => {
             <label htmlFor="image" className="block text-sm font-medium text-gray-700">
               Upload New Image (Optional)
             </label>
-            <input type="file" id="image" name="image" className="mt-1 block w-full text-sm text-gray-900 border border-gray-300 rounded-md cursor-pointer focus:outline-none" onChange={onChangeImage} />
+            <input type="file" id="image" name="image" accept="image/*" className="mt-1 block w-full text-sm text-gray-900 border border-gray-300 rounded-md cursor-pointer focus:outline-none" onChange={onChangeImage} />
           </div>
 
           {/* Submit Button */}

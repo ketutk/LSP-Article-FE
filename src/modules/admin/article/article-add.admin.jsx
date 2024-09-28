@@ -6,7 +6,7 @@ import ReactQuill from "react-quill"; // Import Quill
 
 export const AddArticleAdmin = ({ user, token, imageUrl }) => {
   const [title, setTitle] = useState("");
-  const [text, setText] = useState(""); // This will store the rich text
+  const [text, setText] = useState("");
   const [image, setImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,7 +16,7 @@ export const AddArticleAdmin = ({ user, token, imageUrl }) => {
 
     const formData = new FormData();
     formData.append("title", title);
-    formData.append("text", text); // Append rich text content
+    formData.append("text", text);
     formData.append("image", image);
 
     try {
@@ -69,7 +69,15 @@ export const AddArticleAdmin = ({ user, token, imageUrl }) => {
             <label htmlFor="image" className="block text-sm font-medium text-gray-700">
               Upload Image
             </label>
-            <input type="file" id="image" name="image" className="mt-1 block w-full text-sm text-gray-900 border border-gray-300 rounded-md cursor-pointer focus:outline-none" onChange={(e) => setImage(e.target.files[0])} required />
+            <input
+              type="file"
+              id="image"
+              name="image"
+              accept="image/*"
+              className="mt-1 block w-full text-sm text-gray-900 border border-gray-300 rounded-md cursor-pointer focus:outline-none"
+              onChange={(e) => setImage(e.target.files[0])}
+              required
+            />
           </div>
 
           {/* Submit Button */}

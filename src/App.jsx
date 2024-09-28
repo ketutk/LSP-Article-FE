@@ -25,7 +25,7 @@ function App() {
         <Routes>
           {/* Umum */}
           <Route path="/" element={<Navbar component={Home} />} />
-          <Route path="/login" element={<Navbar component={Login} />} />
+          <Route path="/login" element={<Login />} />
 
           {/* User */}
           <Route path="/article" element={<Navbar component={ArticleUser} />} />

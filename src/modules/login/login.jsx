@@ -11,7 +11,9 @@ export const Login = () => {
 
   const token = localStorage.getItem("token");
   if (token) {
-    window.location.href = "/admin/article/";
+    setTimeout(() => {
+      window.location.href = "/admin/article";
+    }, 2000);
   }
 
   const handleSubmit = async (e) => {
